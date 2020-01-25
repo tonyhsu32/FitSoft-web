@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- <link rel="Shortcut Icon" type="image/x-icon" href='Image/f.svg'/> -->
+
+<!-- CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<!-- Bootstrap core CSS & Submenu -->
+<link href="Css/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" href="dist/css/bootstrap-submenu.css">
+
+<!-- font awesome icons CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Aos CSS-->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- Animate CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<!-- class="animated XXXXX", "animated" + 效果動態名稱 -->
+
+<title>Fitsoft葆光系統股份有限公司--POS.餐飲系統 餐飲軟體 PDA點餐系統 iPod/iPad點餐</title>
+
+
+
+</head>
+<style>
+.o-hidden {
+        overflow:hidden
+    }
+
+    .decoration.scale-2 svg {
+        transform:scale(2);
+    }
+
+    .decoration svg {
+        background:0 0 !important
+    }
+
+    .decoration.right {
+        right:0
+    }
+
+    .decoration.bottom {
+        bottom:0
+    }
+
+    .decoration.scale-4 svg {
+        transform:scale(4);
+    }
+
+    .decoration.top {
+        top:0
+    }
+
+    .decoration.left {
+        left:0
+    }
+
+    .bg-primary-1 {
+        background-color: #375ABB !important
+    }
+
+    .bg-primary-2 {
+        background-color: #FB8F8A !important
+    }
+
+    .bg-primary-3 {
+        background-color: #1B1F3B !important
+    }
+
+    .bg-primary-4 {
+        background-image: linear-gradient(135deg, #375ABB 50%, red)
+    }
+
+    .bg-primary-alt-1 {
+        background:#f3f5fb
+    }
+
+    .bg-primary-alt-2 {
+        background:#F8F9F9  
+    }
+
+    .divider {
+        position:relative
+    }
+
+    .divider svg {
+        border: none;
+        background:0 0 !important;
+        height:6vw
+    }
+
+    .flip-x {
+        transform:scaleX(-1)
+    }
+
+    .btn-primary-3 {
+        color: #fff;
+        background-color: #1b1f3b;
+        border-color:#1b1f3b
+    }
+
+    .btn-primary-3:hover {
+        color: #fff;
+        background-color: #0f1121;
+        border-color:#0b0d18
+    }
+
+    .btn-white {
+        background:#fff;
+        color:#3755be
+    }
+
+    .btn-white:hover {
+        color:#3755be;
+        background:rgba(255,255,255,.9)
+    }
+
+    .display-1 {
+        font-size: 4.5rem;
+        font-weight: 600;
+        line-height:1.2
+    }
+
+    hr { 
+        display: block;
+        /* margin-top: 1em; */
+        /* margin-bottom: 1em; */
+        margin-left: 50px;
+        margin-right: 50px;
+        border-style: inset;
+        border-width: 1px; 
+    }
+
+    .underline-from-center {
+        display: inline-block;
+        vertical-align: middle;
+        /* -webkit-transform: perspective(1px) translateZ(0); */
+        transform: perspective(1px) translateZ(0);
+        /* box-shadow: 0 0 0.5px rgb(0, 0, 0); */
+        position: relative;
+        overflow: hidden;
+    }
+
+    .underline-from-center::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 51%;
+        right: 51%;
+        bottom: 0;
+        background: rgb(154, 199, 255);
+        height: 2px;
+        -webkit-transition-property: left, right;
+        transition-property: left, right;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+
+    .underline-from-center:hover:before, .underline-from-center:focus:before, .underline-from-center:active:before {
+        left: 0;
+        right: 0;
+    }
+
+    @keyframes show-animation {
+        0% {
+            transform: scale3d(0, 0, 1);
+            opacity: 0
+        }
+        60% {
+            transform: scale3d(1.05, 1.05, 1);
+        }
+        100% {
+            transform: scale3d(1, 1, 1);
+            opacity: 1 
+        }
+    }
+    
+    @keyframes hide-animation {
+        0% {
+            transform: scale3d(1, 1, 1);
+            opacity: 1
+        }
+        100% {
+            transform: scale3d(0, 0, 1);
+            opacity: 0
+        }
+    }
+
+    .h1-class {
+        font-size: 2em;
+        font-family: inherit;
+        line-height: 1.2;
+        font-weight: 500;
+        margin-top: 2.5em; 
+        margin-bottom: 2.5em;
+        color: rgb(48, 53, 100)
+    }
+
+    .h2-class {
+        font-size: 2em;
+        font-family: inherit;
+        line-height: 1.2;
+        font-weight: 500;
+        margin-top: 1.5em; 
+        margin-bottom: 2.5em;
+        color: rgb(48, 53, 100)
+    }
+
+    .h3-class {
+        font-size: 0.875em;
+        font-family: inherit;
+        /* font-weight: 500; */
+        color: rgb(106, 115, 240)
+    }
+
+    a > p.h3-class:hover {
+        font-size: 0.875em;
+        font-family: inherit;
+        /* font-weight: 500; */
+        color: rgb(48, 53, 100)
+    }
+
+    .FadeInOut {
+        -webkit-animation: show-animation 1s linear forwards;
+        animation: show-animation 1s linear forwards
+    }
+    
+    nav.navbar-default{
+        transition:500ms ease;
+        background:#375ABB;
+    } 
+
+    .logo-1 {
+        color:deepskyblue;
+        opacity: 0.8; 
+        font-size: 10px
+    }
+
+    nav.logo-1,nav.navbar-default:hover {
+        background-color: #1B1F3B !important;
+        transition: background-color 500ms linear
+    }
+
+    .img-fluid {
+        max-width: 100%;
+        height:auto
+    }
+
+    .opacity-1
+     {
+        opacity:.5 !important
+    }
+
+    .display-a-2 {
+        font-weight: 500;
+        line-height: 1.3;
+        font-size: 2rem;
+        color: rgb(48, 53, 100)
+    }
+
+    @media (min-width:992px) {
+        .row.row-grid > [class*=col-lg-]+[class*=col-lg-] { 
+            margin-top:0
+        }
+    }
+    
+    .ani-fade {
+        opacity: 0;
+        transition:opacity .5s .2s
+    }
+
+    .ani-fade.active {
+        opacity:1
+    }
+
+/* #########  Aos-add-animation  ########## */
+    /* [data-aos="show-animation"] {
+        opacity: 0;
+        transition-property: transform, opacity;
+
+        &.aos-animate {
+            opacity: 1;
+        }
+    
+        @media screen and (min-width: 768px) {
+            transform: translateX(100px);
+
+            &.aos-animate {
+                transform: translateX(0);
+            }
+        }
+    } */
+
+    .box-1 {
+        font-family: inherit;
+        line-height: 1.2;
+        height: 450px;
+        width: 558px;
+        border: none;
+        float: left;
+        margin-left: 0rem;
+        margin-right: 0.75rem;
+    }
+
+    .box-2 {
+        font-family: inherit;
+        line-height: 1.2;
+        height: 450px;
+        width: 558px;
+        border: none;
+        float: left;
+        margin-right: 0rem;
+        margin-left: 0.75rem;
+    }
+
+    .blink {
+        color: rgb(48, 53, 100)
+    }
+
+    .blink:hover {
+        color: rgb(184, 184, 184);
+        animation-duration: 1s;
+        animation-name: blink;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+    }
+
+    @keyframes blink  {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0.5;
+        }
+    }
+
+    .light-blue {
+        background: rgb(130, 215, 255);
+    }
+
+    a.link-apple {
+        color: black;
+        font-size: 20px
+    }
+
+    a.link-apple:hover {
+        color: gray;
+        opacity: 0.5;
+        font-size: 20px
+    }
+
+    a.link-fb {
+        color:rgb(0, 64, 255);
+        opacity: 0.8;
+        font-size: 18px
+    }
+
+    a.link-fb:hover {
+        color: gray;
+        opacity: 0.5;
+        font-size: 18px
+    }
+
+    a.link-a {
+        text-decoration: none;
+        color: black;
+        line-height: 0.5rem
+    }
+
+    a.link-a:hover {
+        text-decoration: none;
+        color: blue;
+        line-height: 0.5rem
+    }
+
+    p.link-b {
+        text-decoration: none;
+        display: block;
+        font-size: 0.875rem;
+        color: gray;
+    }
+
+    .link-c {
+        font-size: 0.75rem;
+        color: gray;
+    }
+
+    #goTop {       
+        /* position: fixed;     */
+        bottom: 50px;       
+        right: 0%;
+        width: 2rem;
+        height: 2rem; 
+        cursor: pointer;
+        opacity: 0.5;
+        background-size: cover;
+        background: none repeat scroll 0 0 gray;     
+        border-radius: 50%;     
+        -webkit-border-radius: 50%;     
+        padding: 5px 8px;     
+        text-decoration: none;     
+        /* text-shadow: 0 3px 0 #999;      */
+        /* -webkit-text-shadow: 0 3px 0 #999; */
+        /* box-shadow: 5px 3px rgba(0, 0, 0, 0.3); */
+        transition: opacity .5s;
+        -webkit-transition: opacity .5s;
+        z-index: 3
+    }
+
+    #goTop:hover {       
+        /* position: fixed;     */
+        bottom: 50px;       
+        right: 0%;
+        width: 2rem;
+        height: 2rem; 
+        cursor: pointer;
+        opacity: 0.5;
+        background-size: cover;
+        background: none repeat scroll 0 0 lightblue;     
+        border-radius: 50%;     
+        -webkit-border-radius: 50%;     
+        padding: 5px 8px;     
+        text-decoration: none;     
+        /* text-shadow: 0 3px 0 #999;      */
+        /* -webkit-text-shadow: 0 3px 0 #999; */
+        box-shadow: 5px 3px gray;
+        transition: opacity .5s;
+        -webkit-transition: opacity .5s;
+        z-index: 3
+    }
+
+
+</style>
+
+<!-- Bootstrap submenu JS -->
+<script src="dist/js/bootstrap-submenu.js" defer></script>
+
+<script>
+$('[data-submenu]').submenupicker();
+
+
+
+</script>
+<body>
+
+<!-- navbar-fixed-top -->
+<nav id='nav' class='navbar navbar-default fixed-top navbar-expand-lg navbar-dark' style='height:70px; min-height: 70px'>
+    <div class='container-fluid'>    
+        <div class='navbar-header'>
+            <a class='navbar-brand' href='home.html'>Fitsoft&reg;<h6 class='logo-1' style='line-height: 5px'>葆光系統股份有限公司</h6><h6 class='logo-1' style='line-height: 0px;'>Free Intellect Software Corp</h6></a>
+        </div>
+        <ul class='navbar-nav mr-auto mt-2 mt-lg-0'>
+            <li class='nav-item active'>
+                <a class='nav-link underline-from-center' href='#'>關於<span class='sr-only'></a>
+            </li>
+            <li class='nav-item dropdown'>
+                <a class='nav-link dropdown-toggle' href='#' data-toggle="dropdown">產品</a>
+                <div class='dropdown-menu'>
+                    <a class='dropdown-item' href='#'>餐飲POS系統</a>
+                    <a class='dropdown-item' href='#'>廚房顯示系統</a>
+                    <a class='dropdown-item' href='#'>總部管理系統</a>
+                    <a class='dropdown-item' href='#'>採購物料系統</a>
+                    <a class='dropdown-item' href='#'>會計管理系統</a>
+                    <a class='dropdown-item' href='#'>訂席系統</a>
+                    <a class='dropdown-item' href='#'>人事薪資管理系統</a>
+                    <div class='dropright dropdown-submenu' data-toggle="dropdown">
+                        <div class='dropdown-header'>New Systems</div>
+                            <a class='dropdown-item dropdown-toggle'>Systems</a>
+                                <div class='dropdown-menu'>
+                                    <a class='dropdown-item' href='#'>無線點餐系統</a>
+                                    <a class='dropdown-item' href='#'>控廚系統</a>
+                                    <a class='dropdown-item' href='#'>自助點餐機系統</a>
+                                    <a class='dropdown-item' href='#'>分店線上查詢系統</a>
+                                </div>
+                    </div>
+                </div>
+            </li>
+            <li class='nav-item dropdown'>
+                <a class='nav-link dropdown-toggle' href='#' data-toggle="dropdown">Customized case</a>
+                <div class='dropdown-menu'>
+                    <a class='dropdown-item' href='#'>信用卡刷卡機連線</a>
+                    <a class='dropdown-item' href='#'>悠遊卡系統連線</a>
+                    <a class='dropdown-item' href='#'>發票存根聯電子化作業</a>
+                    <a class='dropdown-item' href='#'>ERP/後台系統連線</a>
+                    <a class='dropdown-item' href='#'>飯店系統連線</a>
+                    <a class='dropdown-item' href='#'>IC卡系統連線</a>
+                    <a class='dropdown-item' href='#'>儲值卡系統連線</a>
+                    <a class='dropdown-item' href='#'>視窗卡(Visual Card)系統</a>
+                </div>
+            </li>
+            <li class='nav-item dropdown'>
+                <a class='nav-link dropdown-toggle' href='#' data-toggle="dropdown">Reference customer</a>
+                <div class='dropdown-menu'>
+                    <a class='dropdown-item' href='#'>代表性客戶群</a>
+                    <a class='dropdown-item' href='#'>西餐/咖啡</a>
+                    <a class='dropdown-item' href='#'>西點烘焙</a>
+                    <a class='dropdown-item' href='#'>中式餐廳</a>
+                    <a class='dropdown-item' href='#'>日式料理</a>
+                    <a class='dropdown-item' href='#'>休閒娛樂</a>
+                    <a class='dropdown-item' href='#'>燒肉/火鍋/其他類</a>
+                    <a class='dropdown-item' href='#'>輕食/茶飲</a>
+                    <a class='dropdown-item' href='#'>後檯系統/訂席系統</a>
+                    <a class='dropdown-item' href='#'>大陸地區</a>
+                </div>
+            </li>
+            <li class='nav-item'>
+                <a class='nav-link underline-from-center' href='#'>Partner</a>
+            </li>
+        </ul>
+        <ul class='navbar-nav flex-row ml-md-auto d-none d-md-flex'>
+            <li class='nav-item'>
+                <a class='nav-link underline-from-center' href='#'>Contact us</a>
+            </li>
+            <li class='nav-item'>
+                <a class='nav-link' href='https://www.facebook.com/pg/chris.fitsoft/posts/' target='_blank' rel='noopener' aria-label='Facebook'><i class='fa fa-facebook-square' style='font-size:18px'></i></a>
+                <title>Facebook</title>
+            </li>
+            <li class='nav-item'>
+                <a class='nav-link' href='https://apps.apple.com/us/app/葆光mox點餐/id1448666433' target='_blank' rel='noopener' aria-label='Apple Store'><i class='fa fa-apple' style='font-size:18px'></i></a>
+                <title>Apple_Store</title>
+            </li>
+            <li class='nav-item' style='padding-left:10px'>
+                <a href='#'>
+                    <button class='btn btn-success' type='button'>
+                        <span class='btn-inner--icon'>
+                            <i class='fa fa-cloud-download' style='font-size:16px'></i>
+                        </span>Download
+                    </button>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<section style='height: 30rem; background: rgb(206, 206, 206)' class='text-center py-5'>
+    <div class='container'>
+        <div class='row justify-content-center'>
+            <div class='col-md-9 aos-init'>
+                <h2 style='margin-top: 12rem' class='h1-class' data-aos='fade-up'>Download</h2>    
+            </div>
+        </div>
+    </div>   
+</section>
+
+
+</body>
+
+<!-- Aos JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- AOS.init(); 初始化設定！-->
+
+<script>
+    AOS.init({
+        duration:1000,
+        // once:"true"
+    });
+</script>
+
+</html>
